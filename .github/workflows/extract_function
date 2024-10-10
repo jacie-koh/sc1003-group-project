@@ -11,3 +11,5 @@ def extract_student_info(file_location):
     print(student_records[0])
 
 extract_student_info(directory)
+
+#student_record[rows/students][student particulars(school = 2, gender = 4, gpa = 5)]
