@@ -7,9 +7,10 @@ def extract_student_info(file_location):
         for lines in csvfile:
             student_info = lines.strip("\n").split(",")
             student_records.append(student_info)
+    return student_records
 
-    print(student_records[0])
 
-extract_student_info(directory)
+student_records = extract_student_info(directory)
+print(student_records[0])
 
 #student_record[rows/students][student particulars(school = 2, gender = 4, gpa = 5)]
