@@ -1,0 +1,13 @@
+directory = "records.csv"
+
+def extract_student_info(file_location):
+    student_records = []
+
+    with open(file_location, 'r') as csvfile:
+        for lines in csvfile:
+            student_info = lines.strip("\n").split(",")
+            student_records.append(student_info)
+
+    print(student_records[0])
+
+extract_student_info(directory)
