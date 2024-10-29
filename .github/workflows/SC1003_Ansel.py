@@ -1,7 +1,4 @@
 import ipywidgets as widgets
-
-"a"
-
 students = []
 output = []
 with open("records.csv", "r") as file:
