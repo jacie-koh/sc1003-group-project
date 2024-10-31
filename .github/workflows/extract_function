@@ -1,0 +1,34 @@
+FILE_DIRECTORY = "records.csv"
+SCHOOL = 2
+GENDER = 4
+GPA = 5
+
+
+# This function extracts the student info and saves it as a list
+def extract_student_info(file_location):
+    
+    # Initialise a list to hold file info
+    file_information = []
+
+    # Read the file
+    with open(file_location, 'r') as csvfile:
+
+        # Iterate through the lines in the file
+        for lines in csvfile:
+
+            # Save the cleaned column info of each row to a list
+            file_rows = lines.strip("\n").split(",")
+
+            # Add each row of info to the consolidated file info
+            file_information.append(file_rows)
+        
+        header = file_information[0]
+        student_records = file_information[1:]
+
+    return header, student_records
+
+
+header, student_records = extract_student_info(FILE_DIRECTORY)
+print(header)
+
+#student_record[rows/students][student particulars(school = 2, gender = 4, gpa = 5)]
